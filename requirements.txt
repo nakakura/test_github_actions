@@ -1,0 +1,8 @@
+configparser==4.0.2
+futures==3.3.0
+mock==3.0.5
+pytest==4.6.11
+pytest-mock==2.0.0
+simplejson==3.17.0
+requests==2.23.0
+typing==3.7.4.1

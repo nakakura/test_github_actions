@@ -8,6 +8,11 @@ find_package(catkin REQUIRED
   COMPONENTS rospy message_generation std_msgs)
 
 #add_message_files(DIRECTORY)
+add_service_files(
+  FILES
+  SkyWayEvents.srv
+  SkyWayControls.srv
+)
 
 # Actually generate the language-specific message and usecase files
 generate_messages(DEPENDENCIES std_msgs)
