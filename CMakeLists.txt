@@ -8,11 +8,11 @@ find_package(catkin REQUIRED
   COMPONENTS rospy message_generation std_msgs)
 
 #add_message_files(DIRECTORY)
-add_service_files(
-  FILES
-  SkyWayEvents.srv
-  SkyWayControls.srv
-)
+#add_service_files(
+#  FILES
+#  SkyWayEvents.srv
+#  SkyWayControls.srv
+#)
 
 # Actually generate the language-specific message and usecase files
 generate_messages(DEPENDENCIES std_msgs)
@@ -20,3 +20,8 @@ generate_messages(DEPENDENCIES std_msgs)
 # Declare that this catkin package's runtime dependencies
 catkin_package(CATKIN_DEPENDS message_runtime std_msgs)
 
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  add_rostest(test/runner.test)
+  add_rostest(test/domain/common/model/runner.test)
+endif()
