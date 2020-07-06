@@ -2,12 +2,13 @@
 import simplejson as json
 
 from domain.common.model import PeerInfo
+from domain.peer.interface import IPeerApi
 from domain.peer.model import CreateRequestParams, PeerEvent, PeerStatus
 from rest import Rest
 from error import MyException
 
 
-class PeerApi:
+class PeerApi(IPeerApi):
     def __init__(self, domain):
         # type: (str) -> None
         self.__rest = Rest(domain)

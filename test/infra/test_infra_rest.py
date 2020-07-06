@@ -13,7 +13,7 @@ sys.path.insert(
 )
 from infra.rest import Rest
 from error import MyException
-from ..helper import get_free_port
+from ..helper_module import get_free_port
 
 
 PKG = "skyway"
