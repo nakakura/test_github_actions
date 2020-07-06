@@ -1,5 +1,6 @@
 configparser==4.0.2
 futures==3.3.0
+injector==0.18.3
 mock==3.0.5
 pytest==4.6.11
 pytest-mock==2.0.0
